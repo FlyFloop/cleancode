@@ -1,1 +1,9 @@
-1-İsimlendirme Kuralları
+1-İsimlendirme Kuralları(Naming Conventions)
+Değişken isimleri açık açık yazılamlı
+s, j, k gibi sonradan okunduğunda anlaşılmayacak kodlar verilmemeli
+Tanımlanıcak bütün değişkenler açık açık hangi işi yapıcağını belirterek isimlendirilmeli
+
+yanlış tanımlama ---> int s;
+doğru tanımlama ----> int size;
+
+2-)Tanımlanıcak bütün değişkenler fonksiyonlar classlar vs hepsi ingilizce tanımlanmalı

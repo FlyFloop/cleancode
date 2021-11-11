@@ -1,0 +1,5 @@
+Pascal Case Nedir:
+Değişken, sınıf, metod veya fonksiyonun kelimeleri bitiş ve büyük harfle başlayacak şekilde yazılmasıdır.
+
+Örnek:
+ThisIsVariable, GetCustomer, NewObject

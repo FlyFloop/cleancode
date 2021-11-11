@@ -1,0 +1,4 @@
+camelCase nedir:
+değişken, sınıf, metod veya fonksiyonu kelimeleri bitiş ve küçük harfle başlayacak şekilde yazılmasıdır.
+örnek:
+thisIsVariable,getCustomer
