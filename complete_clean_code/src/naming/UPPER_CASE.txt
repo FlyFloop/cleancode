@@ -1,0 +1,7 @@
+UPPER_CASE nedir:
+UPPER CASE bütün kelimelerin büyük harfle yazılması ve aralarında '_' alttan çizgi kullanılması şeklinde olan yaklaşımı ifade etmekte.
+
+Örnekler:
+SECURITY_CASE
+PUBLIC_API_TOKEN
+SCHOOL_NUMBER_FOR_STUDENT
