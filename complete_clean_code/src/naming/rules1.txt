@@ -7,3 +7,10 @@ yanlış tanımlama ---> int s;
 doğru tanımlama ----> int size;
 
 2-)Tanımlanıcak bütün değişkenler fonksiyonlar classlar vs hepsi ingilizce tanımlanmalı
+Her dilin kendine özel isimlendirme kuralları vardır.
+
+Kullandığınız dilin adlandırma kurallarını öğrenmek istiyorsanız
+
+Örnek:
+c# naming conventions, java naming conventions...
+
