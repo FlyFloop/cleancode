@@ -26,7 +26,9 @@ public class WorkingWithMetods {
             validateIdentityIfEmpty(customer);
             validateFirstNameIfEmpty(customer);
             validateLastNameIfEmpty(customer);
+            checkCustomerExits(customer);
             customerDal.add(customer);
+
         }
         public void addByOtherBusiness(Customer customer) throws Exception {
             /*
@@ -36,11 +38,19 @@ public class WorkingWithMetods {
             Böylelikle hem ad,soyad,tcno doğrulamasını çözmüş olduk
             hemde bir nesne için özel istenen kuralı tanımlamış olduk
              */
-            validateFirstNameLength(customer);
+            validateFirstNameLength(customer);//validasyon kodları
             validateIdentityIfEmpty(customer);
             validateFirstNameIfEmpty(customer);
             validateLastNameIfEmpty(customer);
+
+            checkCustomerExits(customer);//business kodları
             customerDal.add(customer);
+
+        }
+        private void checkCustomerExits(Customer customer) throws Exception {
+            if (customerDal.customerExist(customer)){
+                throw new Exception("Müşteri zaten mevcut.");
+            }
         }
         private void validateFirstNameIfEmpty(Customer customer) throws  Exception{
 
@@ -74,6 +84,9 @@ public class WorkingWithMetods {
     static class CustomerDal{
         public void add(Customer customer){
             System.out.println("Eklendi");
+        }
+        public boolean customerExist(Customer customer){
+            return true;
         }
 
     }
