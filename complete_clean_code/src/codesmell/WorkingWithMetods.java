@@ -32,6 +32,7 @@ public class WorkingWithMetods {
     }
 }
 /*
+
 Kötü kod:
  public static void main(String[] args) {
         CustomerManager customerManager = new CustomerManager();
