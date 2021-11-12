@@ -18,7 +18,7 @@ public class WorkingWithMetods {
             technical debt -> şimdilik kötü yazdım ama sonra onu düzelticem demek
             if(!customer.firstName.isEmpty() && !customer.lastName.isEmpty() && !customer.identityNumber.isEmpty()){
                 // if bloğu ve altında sout bloğu asla birbiri ile temas etmemeli
-                System.out.println("Eklendi");
+                System.out.println("Eklendi");l
             }
              */
 
