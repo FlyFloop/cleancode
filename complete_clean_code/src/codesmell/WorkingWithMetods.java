@@ -2,16 +2,21 @@ package codesmell;
 
 public class WorkingWithMetods {
     public static void main(String[] args) throws Exception {
-        CustomerDal customerDal = new CustomerDal();
-        CustomerManager customerManager = new CustomerManager(customerDal);
+
+        CustomerManager customerManager = new CustomerManager(new efCustomerDal());
         customerManager.add(new Customer(1,2,"alper","yorgun","1234567890"));
 
     }
     static class CustomerManager{
-        CustomerDal customerDal;
-        CustomerManager(CustomerDal customerDal){
-            this.customerDal = customerDal;
+
+        ICustomerDal iCustomerDal;
+        public CustomerManager(ICustomerDal iCustomerDal){
+
+            this.iCustomerDal = iCustomerDal;
         }
+
+
+
         public void add(Customer customer) throws Exception {
             /*-
             code smell
@@ -26,8 +31,8 @@ public class WorkingWithMetods {
             validateIdentityIfEmpty(customer);
             validateFirstNameIfEmpty(customer);
             validateLastNameIfEmpty(customer);
-            checkCustomerExits(customer);
-            customerDal.add(customer);
+            //checkCustomerExits(customer);
+            iCustomerDal.add(customer);
 
         }
         public void addByOtherBusiness(Customer customer) throws Exception {
@@ -43,12 +48,12 @@ public class WorkingWithMetods {
             validateFirstNameIfEmpty(customer);
             validateLastNameIfEmpty(customer);
 
-            checkCustomerExits(customer);//business kodları
-            customerDal.add(customer);
+           // checkCustomerExits(customer);//business kodları
+            iCustomerDal.add(customer);
 
         }
         private void checkCustomerExits(Customer customer) throws Exception {
-            if (customerDal.customerExist(customer)){
+            if (iCustomerDal.customerExits(customer)){
                 throw new Exception("Müşteri zaten mevcut.");
             }
         }
@@ -81,14 +86,39 @@ public class WorkingWithMetods {
             }
         }
     }
-    static class CustomerDal{
-        public void add(Customer customer){
-            System.out.println("Eklendi");
-        }
-        public boolean customerExist(Customer customer){
-            return true;
+
+
+
+    interface ICustomerDal{
+        void add(Customer customer);
+        boolean customerExits(Customer customer);
+    }
+
+
+    static class efCustomerDal implements ICustomerDal{
+
+        @Override
+        public void add(Customer customer) {
+            System.out.println("Ef database eklendi");
         }
 
+        @Override
+        public boolean customerExits(Customer customer) {
+            return true;
+        }
+    }
+
+    static class NhCustomerDal implements  ICustomerDal{
+
+        @Override
+        public void add(Customer customer) {
+            System.out.println("nh database eklendi");
+        }
+
+        @Override
+        public boolean customerExits(Customer customer) {
+            return true;
+        }
     }
      static class Customer{
         int cityId;
@@ -110,6 +140,7 @@ public class WorkingWithMetods {
 
     }
 }
+
 /*
 
 Kötü kod:

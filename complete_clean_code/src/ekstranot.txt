@@ -1,0 +1,2 @@
+Çıplak class kalmasın:
+Bir classa baktığınız zaman baktığınız class bir implementasyon, inheritance almıyorsa orada bir zayifet olabilir.
