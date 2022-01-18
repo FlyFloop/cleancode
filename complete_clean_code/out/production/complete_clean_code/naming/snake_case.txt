@@ -1,0 +1,7 @@
+snake_case nedir:
+snake_casae kullanımda bütün kelimeler arasında '_ ' alttan çizgi kullanılır ve tüm kelimeler küçük harfle başlamalıdır
+
+örnek:
+security_key
+public_api_token
+school_number_for_student

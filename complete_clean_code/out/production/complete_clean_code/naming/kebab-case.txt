@@ -1,0 +1,7 @@
+Kebab-Case nedir:
+Kebap Case değişken isimlendirmede tüm kelimeler küçük harf ile yazılır ve aralarına ‘-‘ tire işareti eklenir.
+
+örnek:
+security-key
+public-api-token
+school-number-for-student
